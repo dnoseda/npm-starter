@@ -2,6 +2,10 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+<style type="text/css">
+	.grid-item { width: 25%; }
+.grid-item--width2 { width: 50%; }
+</style>
 </head>
 <body>
 	<form>
@@ -11,10 +15,18 @@
 			</label>
 			<input id="query" name="query" type="text">			
 		</div>
-		<a href="#"></a>
-		
+		<a href="#" id="search">Buscar</a>
+
 	</form>
+	<div id="results">
+		<div class="grid">
+		</div>
+	</div>
 </body>
+<script id="entry-template" type="text/x-handlebars-template">
+  
+  <div class="grid-item">{{title}}</div>
+</script>
 <script src="/bundle.js">
 	
 </script>
