@@ -1,13 +1,19 @@
-var $grid;
-$(function(){
+var grid;
+var Handlebars = require('handlebars')
+var Isotope = require('isotope-layout')
+var grid;
+var MP = require('./mercadolibre-1.0.4')
+
 
   MELI.init({client_id: 6586});
 
-  $grid = $('.grid').isotope({
+  grid = new Isotope('.grid',{
     // options
     itemSelector: '.grid-item',
     layoutMode: 'fitRows'
   });
+
+  window.grid = grid;
 
   var source   = $("#entry-template").html();
   var template = Handlebars.compile(source);
@@ -26,5 +32,4 @@ $(function(){
       }
     });
   });
-});
 
